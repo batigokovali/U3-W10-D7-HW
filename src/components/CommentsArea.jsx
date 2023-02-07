@@ -1,5 +1,6 @@
 import { Component } from "react";
 import CommentsList from "./CommentsList";
+import { useState, useEffect } from "react";
 const url = "https://striveschool-api.herokuapp.com/api/comments/";
 
 class CommentsArea extends Component {
