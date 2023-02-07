@@ -3,10 +3,10 @@ import { Card } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 const deleteURL = "https://striveschool-api.herokuapp.com/api/comments/";
 
-class singleComment extends Component {
-  deleteComment = async () => {
+const singleComment = (props) => {
+  const deleteComment = async () => {
     try {
-      let response = await fetch(deleteURL + this.props.singleCommentID, {
+      let response = await fetch(deleteURL + props.singleCommentID, {
         method: "DELETE",
         headers: {
           Authorization:
@@ -18,16 +18,14 @@ class singleComment extends Component {
     }
   };
 
-  render() {
-    return (
-      <>
-        <Card.Text>{this.props.singleCommentToRender}</Card.Text>
-        <Button variant="danger" onClick={this.deleteComment}>
-          Delete Comment {this.props.singleCommentID}
-        </Button>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Card.Text>{props.singleCommentToRender}</Card.Text>
+      <Button variant="danger" onClick={deleteComment}>
+        Delete Comment {props.singleCommentID}
+      </Button>
+    </>
+  );
+};
 
 export default singleComment;

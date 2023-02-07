@@ -1,16 +1,14 @@
-import Card from 'react-bootstrap/Card';
+import Card from "react-bootstrap/Card";
 
-function MyJumbotron() {
+const MyJumbotron = () => {
   return (
     <Card className="bg-image">
-      <Card.Body className='card-center'>
+      <Card.Body className="card-center">
         <Card.Title>Welcome to EpiBooks!</Card.Title>
-        <Card.Text>
-          Here you will find plenty of books!
-        </Card.Text>
+        <Card.Text>Here you will find plenty of books!</Card.Text>
       </Card.Body>
     </Card>
   );
-}
+};
 
 export default MyJumbotron;

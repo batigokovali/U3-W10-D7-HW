@@ -1,9 +1,8 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
-
-function MyNav() {
+const MyNav = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -18,6 +17,6 @@ function MyNav() {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default MyNav;
