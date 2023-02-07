@@ -1,0 +1,13 @@
+.selected-book {
+  border: 2px solid red;
+  background-color: aqua !important;
+}
+
+.image-fix {
+  height: 250px;
+  object-fit: cover;
+}
+
+.comment-hide {
+  display: none;
+}
