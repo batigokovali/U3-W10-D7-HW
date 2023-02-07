@@ -11,7 +11,7 @@ import { Row, Col } from "react-bootstrap";
 import { useState } from "react";
 
 const App = () => {
-  const [asin, setAsin] = useState([]);
+  const [asin, setAsin] = useState("");
 
   return (
     <div className="App">

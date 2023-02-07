@@ -4,6 +4,7 @@ const url = "https://striveschool-api.herokuapp.com/api/comments/";
 
 const CommentsArea = (props) => {
   const [comments, setComments] = useState([]);
+  const [asin, setAsin] = useState("");
 
   const fetchComments = async () => {
     try {
@@ -30,20 +31,14 @@ const CommentsArea = (props) => {
     fetchComments();
   }, [props.asinToSend]);
 
-  useEffect(() => {
-    fetchComments();
-  }, []);
-
   return comments.map((comment) => {
     return (
       <>
-        {props.asinToSend ? (
+        {props.asinToSend !== "" && (
           <CommentsList
             key={comment._id}
             singleComment={comment}
           ></CommentsList>
-        ) : (
-          <div>Loading Comments...</div>
         )}
       </>
     );
