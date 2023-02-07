@@ -28,7 +28,9 @@ const CommentsArea = (props) => {
   };
 
   useEffect(() => {
-    fetchComments();
+    if (props.asinToSend) {
+      fetchComments();
+    }
   }, [props.asinToSend]);
 
   return comments.map((comment) => {
